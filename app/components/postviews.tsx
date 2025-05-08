@@ -14,8 +14,8 @@ export default async function PostViews(props:any) {
   const post = await response.json();
 
   return (
-    <div key={post.id}>
-      <h1 style={{color:"red"}}>Post Detail {post.id} </h1>
+    <div key={post.id} className='flex flex-col justify-center w-[600px] bg-blue-100 shadow-xl'>
+
       <h2 className='text-2xl font-bold dark:text-white  hover:text-red-600 transition-all duration-300 cursor-pointer'>{post.title}</h2>
       <p className='text-gray-400'>{post.body}</p>
     </div>
